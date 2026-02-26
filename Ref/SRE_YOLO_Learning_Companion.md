@@ -83,39 +83,6 @@ A well-organised ML project separates concerns: data loading code lives in one p
 - ▶ [Cookiecutter Data Science — Project Templates](https://www.youtube.com/watch?v=2VuKIxzAyTE) — standard ML folder conventions explained
 
 ---
-
-### YAML Configuration Files · 🟢 Beginner
-
-YAML is a human-readable format for storing configuration. Instead of hardcoding hyperparameters in your Python files, you put them in a `.yaml` file. Changing a learning rate then means editing one line in one file, not hunting through code.
-
-**🔗 In this project:** `configs/train.yaml` holds all 19 hyperparameters: learning rate, loss weights (c1=0.1, c2=7.5...), image sizes, SR layer indices, and more.
-
-- ▶ [YAML Tutorial — Learn YAML in 10 Minutes](https://www.youtube.com/watch?v=BEki_rsWu4E) — syntax and use cases for YAML
-- ▶ [Python yaml Library — Loading Configs](https://www.youtube.com/watch?v=YPrST4VKfUQ) — reading YAML files in Python scripts
-
----
-
-### Git Version Control · 🟢 Beginner
-
-Git tracks changes to your code over time. You can snapshot your work (commit), experiment on a copy (branch), and go back if something breaks. In ML, it also tracks which code version produced which experiment results.
-
-**🔗 In this project:** The spec asks you to `git commit` after every section. This means you always have a working checkpoint to return to if a later section breaks something.
-
-- ▶ [Git and GitHub for Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=RGOj5yH7evk) — 1-hour complete beginner guide
-- ▶ [Git for Machine Learning — Practical Guide](https://www.youtube.com/watch?v=VzAkMRXQoOM) — ML-specific git workflows
-
----
-
-### argparse — CLI for Python Scripts · 🟢 Beginner
-
-argparse lets you pass arguments to a Python script from the command line. Instead of editing code to change which dataset to use, you write: `python train.py --split 2 --weights coco.pt`.
-
-**🔗 In this project:** `train.py` uses argparse so you can switch between splits, load pretrained weights, and toggle W&B logging all from the command line without touching code.
-
-- ▶ [Python argparse Tutorial](https://www.youtube.com/watch?v=cdblJqEUDNo) — building command-line ML scripts
-
----
-
 ## 📂 Project File & Folder Reference — What Each File Does
 
 > Think of the project as an assembly line. Data flows left to right through each component:
@@ -402,7 +369,40 @@ data/raw/ → preprocess.py → data/processed/ → dataset.py → trainer.py
                                  export.py → weights/sre_yolo_inference.onnx
 ```
 
+
+
+### YAML Configuration Files · 🟢 Beginner
+
+YAML is a human-readable format for storing configuration. Instead of hardcoding hyperparameters in your Python files, you put them in a `.yaml` file. Changing a learning rate then means editing one line in one file, not hunting through code.
+
+**🔗 In this project:** `configs/train.yaml` holds all 19 hyperparameters: learning rate, loss weights (c1=0.1, c2=7.5...), image sizes, SR layer indices, and more.
+
+- ▶ [YAML Tutorial — Learn YAML in 10 Minutes](https://www.youtube.com/watch?v=BEki_rsWu4E) — syntax and use cases for YAML
+- ▶ [Python yaml Library — Loading Configs](https://www.youtube.com/watch?v=YPrST4VKfUQ) — reading YAML files in Python scripts
+
 ---
+
+### Git Version Control · 🟢 Beginner
+
+Git tracks changes to your code over time. You can snapshot your work (commit), experiment on a copy (branch), and go back if something breaks. In ML, it also tracks which code version produced which experiment results.
+
+**🔗 In this project:** The spec asks you to `git commit` after every section. This means you always have a working checkpoint to return to if a later section breaks something.
+
+- ▶ [Git and GitHub for Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=RGOj5yH7evk) — 1-hour complete beginner guide
+- ▶ [Git for Machine Learning — Practical Guide](https://www.youtube.com/watch?v=VzAkMRXQoOM) — ML-specific git workflows
+
+---
+
+### argparse — CLI for Python Scripts · 🟢 Beginner
+
+argparse lets you pass arguments to a Python script from the command line. Instead of editing code to change which dataset to use, you write: `python train.py --split 2 --weights coco.pt`.
+
+**🔗 In this project:** `train.py` uses argparse so you can switch between splits, load pretrained weights, and toggle W&B logging all from the command line without touching code.
+
+- ▶ [Python argparse Tutorial](https://www.youtube.com/watch?v=cdblJqEUDNo) — building command-line ML scripts
+
+---
+
 
 ## 🗄️ Section 3 — Data Pipeline
 
